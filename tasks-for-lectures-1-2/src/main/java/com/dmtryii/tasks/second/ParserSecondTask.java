@@ -19,7 +19,7 @@ public class ParserSecondTask {
                 .sorted(Map.Entry.comparingByValue(Comparator.reverseOrder()))
                 .limit(top)
                 .collect(Collectors.toMap(
-                        Map.Entry::getKey, Map.Entry::getValue, (e1, e2) -> e1, LinkedHashMap::new));
+                        Map.Entry::getKey, Map.Entry::getValue, (e1, e2) -> e1, TreeMap::new));
     }
 
     private HashMap<String, Integer> parseTags(LinkedList<String> tags) {
