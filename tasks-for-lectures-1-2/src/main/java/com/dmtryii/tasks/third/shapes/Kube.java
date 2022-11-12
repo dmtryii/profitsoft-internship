@@ -1,6 +1,4 @@
-package com.dmtryii.tasks.third_task.shapes;
-
-import com.dmtryii.tasks.third_task.shapes.Shape;
+package com.dmtryii.tasks.third.shapes;
 
 public class Kube extends Shape {
     private final Double side;

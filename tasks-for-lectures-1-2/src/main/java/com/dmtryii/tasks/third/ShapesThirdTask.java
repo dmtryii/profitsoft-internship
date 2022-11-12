@@ -1,4 +1,4 @@
-package com.dmtryii.tasks.third_task;
+package com.dmtryii.tasks.third;
 
 /*
     Завдання #3:
@@ -7,7 +7,7 @@ package com.dmtryii.tasks.third_task;
     Написати unit-тести для методу.
  */
 
-import com.dmtryii.tasks.third_task.shapes.Shape;
+import com.dmtryii.tasks.third.shapes.Shape;
 
 import java.util.*;
 

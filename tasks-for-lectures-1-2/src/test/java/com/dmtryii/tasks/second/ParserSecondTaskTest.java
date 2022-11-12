@@ -1,4 +1,4 @@
-package com.dmtryii.tasks.second_task;
+package com.dmtryii.tasks.second;
 
 import org.junit.Assert;
 import org.junit.Before;
@@ -28,8 +28,7 @@ public class ParserSecondTaskTest {
 
     @Test
     public void forEmptyList() {
-        mapTags = parser.parseTags(tags);
-        actual = parser.getTopTags(mapTags, 5);
+        actual = parser.getTopTags(tags, 5);
 
         Assert.assertEquals(actual.keySet(), expected.keySet());
     }
@@ -54,8 +53,7 @@ public class ParserSecondTaskTest {
                 "#And from #your lips, #she drew the #Hallelujah " +
                 "#Hallelujah");
 
-        mapTags = parser.parseTags(tags);
-        actual = parser.getTopTags(mapTags, 5);
+        actual = parser.getTopTags(tags, 5);
 
         expected.put("#and", 4);
         expected.put("#hallelujah", 3);

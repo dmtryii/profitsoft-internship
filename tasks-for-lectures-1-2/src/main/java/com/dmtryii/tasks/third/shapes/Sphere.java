@@ -1,4 +1,4 @@
-package com.dmtryii.tasks.third_task.shapes;
+package com.dmtryii.tasks.third.shapes;
 
 public class Sphere extends Shape {
 

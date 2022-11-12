@@ -1,4 +1,4 @@
-package com.dmtryii.tasks.first_task;
+package com.dmtryii.tasks.first;
 
 /*
     Завдання #1:

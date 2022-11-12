@@ -1,9 +1,9 @@
-package com.dmtryii.tasks.third_task;
+package com.dmtryii.tasks.third;
 
-import com.dmtryii.tasks.third_task.shapes.Cylinder;
-import com.dmtryii.tasks.third_task.shapes.Kube;
-import com.dmtryii.tasks.third_task.shapes.Shape;
-import com.dmtryii.tasks.third_task.shapes.Sphere;
+import com.dmtryii.tasks.third.shapes.Cylinder;
+import com.dmtryii.tasks.third.shapes.Kube;
+import com.dmtryii.tasks.third.shapes.Shape;
+import com.dmtryii.tasks.third.shapes.Sphere;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
