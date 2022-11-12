@@ -4,38 +4,47 @@ import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
-import java.util.HashMap;
-import java.util.LinkedList;
-import java.util.Map;
+import java.util.*;
 
 public class ParserSecondTaskTest {
 
     private ParserSecondTask parser;
     private LinkedList<String> tags;
-    private Map<String, Integer> mapTags;
     private Map<String, Integer> actual;
     private Map<String, Integer> expected;
-
 
     @Before
     public void setUp() {
         parser = new ParserSecondTask();
         tags = new LinkedList<>();
-        mapTags = new HashMap<>();
-        actual = new HashMap<>();
-        expected = new HashMap<>();
+        actual = new LinkedHashMap<>();
+        expected = new LinkedHashMap<>();
     }
 
     @Test
     public void forEmptyList() {
         actual = parser.getTopTags(tags, 5);
 
-        Assert.assertEquals(actual.keySet(), expected.keySet());
+        Assert.assertEquals(expected.toString(), actual.toString());
+    }
+    @Test
+    public void getTopTwoTags() {
+        tags.add("#a #b #c #d");
+        tags.add("a b c d");
+        tags.add("#a b c #d");
+        tags.add("#a #a #c #c #d #d");
+        tags.add("#a b c #d");
+
+        actual = parser.getTopTags(tags, 2);
+
+        expected.put("#a", 4);
+        expected.put("#d", 4);
+
+        Assert.assertEquals(expected.toString(), actual.toString());
     }
 
     @Test
     public void getTopFiveTags() {
-
         tags.add("I heard there #was a secret chord " +
                 "That David played #and it pleased the Lord " +
                 "But you don't really care for music, do #you");
@@ -57,10 +66,10 @@ public class ParserSecondTaskTest {
 
         expected.put("#and", 4);
         expected.put("#hallelujah", 3);
-        expected.put("#your", 2);
-        expected.put("#was", 2);
         expected.put("#she", 2);
+        expected.put("#was", 2);
+        expected.put("#your", 2);
 
-        Assert.assertEquals(actual.keySet(), expected.keySet());
+        Assert.assertEquals(expected.toString(), actual.toString());
     }
 }
