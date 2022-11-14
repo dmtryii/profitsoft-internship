@@ -20,9 +20,9 @@ public class ShapesThirdTaskTest {
     private Shape kube;
     private Shape sphere;
     private Shape cylinder;
-    Set<Shape> shapes;
-    List<Shape> actual;
-    List<Shape> expected;
+    private Set<Shape> shapes;
+    private List<Shape> actual;
+    private List<Shape> expected;
 
     @Before
     public void setUp() {
