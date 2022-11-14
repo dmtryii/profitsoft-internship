@@ -8,11 +8,13 @@ package com.dmtryii.tasks.second;
     повинні вважатися однією згадкою. Написати unit-тести для цього методу.
  */
 
+import lombok.NonNull;
+
 import java.util.*;
 import java.util.stream.Collectors;
 
 public class ParserSecondTask {
-    public Map<String, Integer> getTopTags(LinkedList<String> tags, int top) {
+    public Map<String, Integer> getTopTags(@NonNull LinkedList<String> tags, int top) {
         return parseTags(tags)
                 .entrySet()
                 .stream()

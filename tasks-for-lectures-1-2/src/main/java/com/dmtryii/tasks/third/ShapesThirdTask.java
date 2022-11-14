@@ -8,12 +8,13 @@ package com.dmtryii.tasks.third;
  */
 
 import com.dmtryii.tasks.third.shapes.Shape;
+import lombok.NonNull;
 
 import java.util.*;
 
 public class ShapesThirdTask {
 
-    public List<Shape> sortShapeByVolume(Set<Shape> shapes) {
+    public List<Shape> sortShapeByVolume(@NonNull Set<Shape> shapes) {
 
         List<Shape> shapesList = new ArrayList<>(shapes);
         Collections.sort(shapesList);

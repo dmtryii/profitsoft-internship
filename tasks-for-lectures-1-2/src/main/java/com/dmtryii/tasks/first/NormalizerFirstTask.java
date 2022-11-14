@@ -6,12 +6,14 @@ package com.dmtryii.tasks.first;
     які позитивні (>=0), відсортувавши їх за спаданням. Зробити unit-тести для цього методу.
  */
 
+import lombok.NonNull;
+
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
 public class NormalizerFirstTask {
-    public List<Integer> getSortedPositiveElements(ArrayList<Integer> array) {
+    public List<Integer> getSortedPositiveElements(@NonNull ArrayList<Integer> array) {
         array.removeIf(num -> num < 0);
         array.sort(Collections.reverseOrder());
         return array;
