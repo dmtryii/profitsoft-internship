@@ -12,12 +12,4 @@ public class Kube extends Shape {
     public Double getVolume() {
         return Math.pow(side, 3);
     }
-
-    @Override
-    public String toString() {
-        return "Kube{" +
-                "side=" + side +
-                ", volume=" + volume +
-                '}';
-    }
 }

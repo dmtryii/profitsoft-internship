@@ -1,5 +1,8 @@
 package com.dmtryii.tasks.third.shapes;
 
+import lombok.ToString;
+
+@ToString
 public abstract class Shape implements Comparable<Shape>{
 
     protected Double volume;

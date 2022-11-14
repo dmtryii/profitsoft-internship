@@ -15,13 +15,4 @@ public class Cylinder extends Shape {
     public Double getVolume() {
         return Math.PI * Math.pow(radius, 2) * height;
     }
-
-    @Override
-    public String toString() {
-        return "Cylinder{" +
-                "height=" + height +
-                ", radius=" + radius +
-                ", volume=" + volume +
-                '}';
-    }
 }
