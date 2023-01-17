@@ -15,7 +15,7 @@ public class FilmSaveDto {
 
     @NotBlank(message = "title is required")
     private String title;
-    @NotBlank(message = "rating is required")
+    @Positive(message = "rating must be positive number")
     private Double rating;
     private LocalDate releaseDate;
     @Positive(message = "directorId must be positive number")

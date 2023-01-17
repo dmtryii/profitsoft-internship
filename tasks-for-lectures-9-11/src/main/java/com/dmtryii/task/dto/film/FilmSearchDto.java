@@ -13,8 +13,8 @@ import javax.validation.constraints.Min;
 public class FilmSearchDto {
 
     private Long directorId;
-    @Min(value = 1000, message = "year should have 4 digits")
-    @Max(value = 9999, message = "year should have 4 digits")
+    @Min(value = 1895, message = "the year cannot be less than 1895")
+    @Max(value = 2025, message = "the year cannot be greater than 2025")
     private Integer year;
     @Min(value = 1, message = "page number should be positive number")
     private Integer page;
