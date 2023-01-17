@@ -11,7 +11,7 @@ CREATE TABLE IF NOT EXISTS director
 CREATE TABLE IF NOT EXISTS film
 (
     id BIGINT AUTO_INCREMENT PRIMARY KEY,
-    rating VARCHAR(13) NOT NULL,
+    rating DECIMAL NOT NULL,
     release_date DATE NULL,
     title VARCHAR(255) NOT NULL,
     director_id BIGINT NULL,
