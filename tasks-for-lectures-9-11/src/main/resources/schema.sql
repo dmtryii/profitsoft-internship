@@ -1,0 +1,21 @@
+DROP TABLE IF EXISTS film;
+DROP TABLE IF EXISTS director;
+
+CREATE TABLE IF NOT EXISTS director
+(
+    id BIGINT AUTO_INCREMENT PRIMARY KEY,
+    first_name VARCHAR(50) NOT NULL,
+    last_name VARCHAR(50) NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS film
+(
+    id BIGINT AUTO_INCREMENT PRIMARY KEY,
+    rating VARCHAR(13) NOT NULL,
+    release_date DATE NULL,
+    title VARCHAR(255) NOT NULL,
+    director_id BIGINT NULL,
+    CONSTRAINT FK_director FOREIGN KEY (director_id)
+        REFERENCES director (id)
+        ON DELETE CASCADE
+);
