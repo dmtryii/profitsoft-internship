@@ -27,7 +27,7 @@ CRUD operations:
         "title": "new title",
         "rating": "new rating",
         "releaseDate": "new releaseDate",
-        "directorId": "new directorId"
+        "directorId": "existing directorId"
    }
    ```
 
