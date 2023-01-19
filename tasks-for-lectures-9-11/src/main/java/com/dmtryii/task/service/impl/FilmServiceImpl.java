@@ -67,11 +67,13 @@ public class FilmServiceImpl implements FilmService {
     public List<FilmDetailsDto> searchFilm(FilmSearchDto dto) {
         Director director = resolveDirector(dto.getDirectorId());
         Integer year = dto.getYear();
+        Double rating = dto.getRating();
+
         Pageable pageable = dto.getPage() == null || dto.getSize() == null
                 ? Pageable.unpaged()
                 : PageRequest.of(dto.getPage() - 1, dto.getSize());
 
-        Page<Film> films = filmRepository.searchAllByDirectorOrYear(director, year, pageable);
+        Page<Film> films = filmRepository.searchAllByDirectorOrYear(director, year, rating, pageable);
 
         return films.stream()
                 .map(this::toFilmDetails)

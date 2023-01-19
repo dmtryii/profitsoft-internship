@@ -18,7 +18,8 @@ public interface FilmRepository extends JpaRepository<Film, Long> {
 
     @Query( "SELECT b " +
             "FROM Film b " +
-            "WHERE b.director = :author OR YEAR(b.releaseDate) = :year")
+            "WHERE b.director = :author OR YEAR(b.releaseDate) = :year OR b.rating >= :rating")
     Page<Film> searchAllByDirectorOrYear(@Param("author") Director author,
-                                       @Param("year") Integer year, Pageable pageable);
+                                         @Param("year") Integer year,
+                                         @Param("rating") Double rating, Pageable pageable);
 }
